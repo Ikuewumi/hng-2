@@ -10,7 +10,8 @@
   }
 
   &-logo {
-    height: var(--fs-md);
+    //height: var(--fs-md);
+    width: min(300px, 50vw);
   }
 
 }
@@ -77,12 +78,18 @@
 
   &-content {
     align-self: end;
-    padding: 2rem 2.5rem;
+    padding: 0 1.25rem 1.5rem;
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;
     justify-content: space-between;
     align-items: start baseline;
+
+
+    @media (min-width: 768px) {
+
+      padding: 2rem 2.5rem;
+    }
   }
 
 
