@@ -26,28 +26,28 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
       "@components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "@composables/*": [
-        "src/composables/*"
+        "./src/composables/*"
       ],
       "@pages/*": [
-        "src/pages/*"
+        "./src/pages/*"
       ],
       "@assets/*": [
-        "src/assets/*"
+        "./src/assets/*"
       ],
       "@scss/*": [
-        "src/scss/*"
+        "./src/scss/*"
       ],
       "@stores/*": [
-        "src/stores/*"
+        "./src/stores/*"
       ],
       "@types/*": [
-        "src/types/*"
+        "./src/types/*"
       ]
     }
   },
