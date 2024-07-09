@@ -12,6 +12,8 @@
 			[pcheckout-header-start pcheckout-main-start] 8fr [pcheckout-main-end pcheckout-summary-start] minmax(350px, 4fr) [pcheckout-header-end pcheckout-main-end];
 		grid-template-rows:
 			[pcheckout-header-start] auto [pcheckout-header-end pcheckout-main-start pcheckout-summary-start] auto [pcheckout-main-end pcheckout-summary-end];
+
+		gap: 3rem 2rem;
 	}
 
 	.summary {
@@ -59,7 +61,7 @@
 	}
 
 	&-heading {
-		font-size: var(--fs-lg);
+		font-size: var(--fs-md);
 		font-weight: 600;
 		line-height: 1;
 	}

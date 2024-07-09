@@ -1,13 +1,13 @@
 import { formatCurrency } from "@/composables/format"
 import { $cartTotal } from "@/stores/cart"
 import { useStore } from "@nanostores/react"
-import { Link } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
 import CustomInput from "../CustomInput"
 import { FormEventHandler } from "react"
 
 
 const inputs = [
-	{ id: "card-number", label: "Card Number" },
+	{ id: "card-number", label: "Card Number", showIcon: true },
 	{ id: "card-expiry", label: "Expiration (MM/YY)" },
 	{ id: "card-cvc", label: "Card Security Code" }
 ]
@@ -17,6 +17,7 @@ const OrderSummary = ({
 
 }) => {
 
+	const navigate = useNavigate()
 	const cartTotal = useStore($cartTotal)
 	const submitForm: FormEventHandler<HTMLFormElement> = (e) => {
 		e.preventDefault()
@@ -51,11 +52,11 @@ const OrderSummary = ({
 						<input type="checkbox" id="summary-terms" />
 						<label htmlFor="summary-terms">You agree to <span>terms & conditions</span> and <span>privacy policy</span></label>
 					</div>
-					<button data-btn className="summary-button to-payment">Place Order</button>
+					<button data-btn className="summary-button to-payment" aria-disabled={cartTotal <= 0}>Place Order</button>
 				</form>
 
 			</> :
-				<Link to="/checkout" data-btn className="summary-button card-form" aria-disabled={cartTotal <= 0}>Place Order</Link>
+				<button data-btn className="summary-button card-form" onClick={() => navigate("/checkout")} disabled={cartTotal <= 0}>Proceed to Payment</button>
 		}
 	</div>
 }

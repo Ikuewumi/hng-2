@@ -10,11 +10,12 @@ runMount()
 function App() {
   const loader = useStore($loader)
   const cartCount = useStore($cartCount)
-  const location = useLocation()
+
+  const location = useLocation();
 
   useEffect(() => {
-    scrollTo(0, 0)
-  }, [location])
+    window.scroll(0, 0);
+  }, [location]);
 
 
   return (

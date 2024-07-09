@@ -18,7 +18,7 @@ const Product = () => {
 	const [selectedImage, setSelectedImage] = useState(0);
 	const [clicked, setClicked] = useState(false)
 	let timerId: number;
-	const INTERVAL = 3000
+	const INTERVAL = 1500
 
 	const reduceQty = () => {
 		if (qty === 1) return
@@ -127,7 +127,7 @@ const Product = () => {
 							onDecrease={reduceQty}
 							onIncrease={() => setQty(qty + 1)}
 						/>
-						<button data-clicked={clicked} data-btn className="pcontent-cart-button" onClick={addItem}>
+						<button disabled={clicked} data-clicked={clicked} data-btn className="pcontent-cart-button" onClick={addItem}>
 							{!clicked ? "Add To Cart" : `+${qty} item(s) to Cart`}
 						</button>
 

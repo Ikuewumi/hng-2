@@ -28,7 +28,6 @@ const HomeCard = ({
 		}, 1)
 		setClicked(true)
 	}
-	console.log(productId)
 	return (
 		<div className="hpcard">
 			<img className="hpcard-img" src={imageUrl} alt={name} />

@@ -11,9 +11,18 @@
 
 	& {
 		grid-row: 2 / 3;
+		grid-column: 1 / -1;
 		border: 1px solid hsla(0, 0%, 85%, 1);
 		padding: 0.75rem;
 		border-radius: 5px;
 		min-width: 0;
+	}
+
+	&-icon {
+		grid-row: 2 / 3;
+		grid-column: 1 / -1;
+		margin-inline: auto 0.75rem;
+		align-self: center;
+		pointer-events: none;
 	}
 }

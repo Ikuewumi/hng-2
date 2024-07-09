@@ -13,6 +13,7 @@
 
 		grid-template-rows:
 			[pcart-header-start] auto [pcart-header-end pcart-main-start pcart-summary-start] auto [pcart-main-end pcart-summary-end];
+		gap: 3rem 2rem;
 	}
 
 
@@ -30,7 +31,7 @@
 	}
 
 	&-heading {
-		font-size: var(--fs-lg);
+		font-size: var(--fs-md);
 		font-weight: 600;
 		line-height: 1;
 	}
@@ -227,7 +228,7 @@
 		background: var(--clr-primary);
 		color: var(--clr-black);
 		border-radius: 5vmax;
-		font-size: var(--fs-2xs);
+		font-size: var(--fs-xs);
 		font-weight: 600;
 		text-align: center;
 		border: none;
@@ -237,10 +238,12 @@
 			margin-top: 1rem;
 		}
 
-		&[aria-disiabled="true"] {
-			background: hsla(0, 0%, 56%, 1) !important;
-			color: var(--clr-light-gray) !important;
+		&[aria-disabled="true"],
+		&[disabled] {
+			background: var(--clr-light-gray) !important;
+			color: var(--clr-dark-gray) !important;
 			cursor: not-allowed;
+			pointer-events: none;
 		}
 	}
 
