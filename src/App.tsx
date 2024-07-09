@@ -1,15 +1,20 @@
 import Assets from "./components/Assets"
 import "./App.scss"
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useLocation } from "react-router-dom"
 import { $loader, runMount } from "@stores/global"
 import { useStore } from "@nanostores/react"
 import { $cartCount } from "./stores/cart"
-import { CSSProperties } from "react"
+import { CSSProperties, useEffect } from "react"
 runMount()
 
 function App() {
   const loader = useStore($loader)
   const cartCount = useStore($cartCount)
+  const location = useLocation()
+
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [location])
 
 
   return (
