@@ -11,6 +11,8 @@
 .head {
   background: var(--clr-primary);
   color: var(--clr-black);
+  position: fixed;
+  top: 0;
 
   &-wrapper {
     display: flex;
