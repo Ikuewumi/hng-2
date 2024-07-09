@@ -1,7 +1,7 @@
 .page-checkout {
 	margin-block: var(--fs-sm) var(--fs-md);
 	display: grid;
-	gap: 1.25rem;
+	gap: 1rem 3rem;
 
 	grid-template-rows: [pcheckout-header-start] auto [pcheckout-header-end pcheckout-main-start] auto [pcheckout-main-end pcheckout-summary-start] auto [pcheckout-summary-end];
 	grid-template-columns: [pcheckout-header-start pcheckout-main-start pcheckout-summary-start] 1fr [pcheckout-header-start pcheckout-main-start pcheckout-summary-start];
@@ -62,7 +62,7 @@
 
 	&-heading {
 		font-size: var(--fs-md);
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 1;
 	}
 
@@ -84,14 +84,14 @@
 
 	&-heading {
 		font-size: var(--fs-sm);
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 1;
 	}
 
 	&-form {
 		--form-gap: 1rem;
 		display: flex;
-		gap: 0.5rem var(--form-gap);
+		gap: 1rem var(--form-gap);
 		flex-flow: row wrap;
 		margin-top: 1.5rem;
 	}

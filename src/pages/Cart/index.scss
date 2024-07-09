@@ -32,8 +32,12 @@
 
 	&-heading {
 		font-size: var(--fs-md);
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 1;
+	}
+
+	&-count {
+		font-weight: 600;
 	}
 
 
@@ -147,7 +151,7 @@
 		border: none;
 		background: none;
 		padding: 0;
-		font-weight: 600;
+		font-weight: 700;
 		cursor: pointer;
 		color: var(--clr-red);
 	}
@@ -183,7 +187,7 @@
 
 	&-heading {
 		font-size: var(--fs-sm);
-		font-weight: 600;
+		font-weight: 700;
 	}
 
 	&-list {
@@ -203,10 +207,10 @@
 		&.total {
 			padding-block: 1rem;
 			border-top: 1px solid var(--clr-light-gray);
-			font-size: var(--fs-sm);
+			font-size: var(--fs-xs);
 
 			&>dd {
-				font-weight: 600;
+				font-weight: 700;
 			}
 		}
 
@@ -229,13 +233,14 @@
 		color: var(--clr-black);
 		border-radius: 5vmax;
 		font-size: var(--fs-xs);
-		font-weight: 600;
+		font-weight: 700;
 		text-align: center;
 		border: none;
 		box-shadow: 0 2px 4px -3px hsla(0, 0%, 0%, 0.04);
 
 		&.to-payment {
 			margin-top: 1rem;
+			padding: 0.75rem 1.5rem;
 		}
 
 		&[aria-disabled="true"],

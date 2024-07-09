@@ -105,9 +105,9 @@
 	gap: 0.5rem;
 
 	&-heading {
-		font-size: var(--fs-lg);
-		font-weight: 600;
-		line-height: 1;
+		font-size: var(--fs-md);
+		font-weight: 700;
+		line-height: 1.05;
 	}
 
 	&-text {
@@ -136,6 +136,7 @@
 		width: fit-content;
 		gap: 0.25rem 1.25rem;
 		margin-top: 0.5rem;
+		font-size: var(--fs-sm);
 
 
 		@media (min-width: 400px) {
@@ -150,8 +151,8 @@
 	}
 
 	&-price {
-		font-size: var(--fs-md);
-		font-weight: 600;
+		font-size: var(--fs-sm);
+		font-weight: 700;
 		margin-top: 0.5rem;
 	}
 
@@ -176,7 +177,7 @@
 		border-radius: 50px;
 		width: 100%;
 		color: var(--clr-black);
-		font-weight: 500;
+		font-weight: 700;
 		text-align: center;
 		padding: 0.75rem 3rem;
 		font-size: var(--fs-xs);
@@ -271,7 +272,7 @@
 	margin-bottom: 1.5rem;
 
 	&-heading {
-		font-size: var(--fs-md);
+		font-size: var(--fs-sm);
 		font-weight: 600;
 	}
 

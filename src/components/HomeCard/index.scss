@@ -2,20 +2,21 @@
 	display: grid;
 	height: fit-content;
 	padding: 0.25rem 0 1.25rem;
-	overflow: hidden;
-	border-radius: 20px;
 	background: var(--clr-white);
 	grid-template-columns: 1.25rem auto 1.25rem;
 	grid-auto-flow: column;
-	box-shadow: 1px 2px 8px 0px hsla(0, 0%, 0%, 0.04);
 
 	&-link {
 		color: var(--clr-black);
 		text-decoration: none;
+		box-shadow: 1px 2px 8px 0px hsla(0, 0%, 0%, 0.04);
+		border-radius: 20px;
+		overflow: hidden;
+		height: fit-content;
 
 		&:hover,
 		&:focus {
-			text-decoration: 2px var(--clr-primary) underline;
+			box-shadow: 1px 2px 8px 0px hsla(0, 0%, 0%, 0.2);
 		}
 	}
 
@@ -35,7 +36,7 @@
 
 
 	&-name {
-		font-weight: 600;
+		font-weight: 700;
 		font-size: var(--fs-xs);
 		line-height: 1.15;
 		margin-top: 0.5rem;
@@ -46,6 +47,7 @@
 		margin-top: 0.5rem;
 		color: var(--clr-dark-gray);
 		font-weight: 700;
+		font-size: clamp(0.5rem, 0.5rem + 2vw, 0.9rem);
 	}
 
 
