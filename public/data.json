@@ -1,0 +1,143 @@
+[
+  {
+    "name": "Apple 16\" MacBook Pro (M3 Pro, Space Black)",
+    "price": 2499.00,
+    "manufacturingId": "APMRW13LLA",
+    "productId": "APMRW13LLA",
+    "imageUrl": "/products/g1.jpg",
+    "images": [
+      "/products/g2.jpg"
+    ],
+    "keyFeatures": [
+      "Apple M3 Pro 12-Core Chip",
+      "18GB Unified RAM | 512GB SSD",
+      "16\" 3456 x 2234 Liquid Retina XDR Screen",
+      "18-Core GPU | 16-Core Neural Engine",
+      "Wi-Fi 6E (802.11ax) | Bluetooth 5.3",
+      "Thunderbolt 4 | HDMI | MagSafe 3",
+      "SDXC Slot | FaceTime HD 1080p Camera",
+      "Backlit Magic Keyboard",
+      "Force Touch Trackpad | Touch ID Sensor",
+      "macOS"
+    ],
+    "description": "Built for all types of creatives, including photographers, filmmakers, 3D artists, music producers, developers, and more, the space black Apple 16\" MacBook Pro is the ultimate pro mobile workstation for the ultimate user. The system features the Apple M3 Pro 12-Core Chip, which provides the power and performance efficiency needed to handle all your professional workflows. Now built on 3nm process technology, the M3 Pro 12-Core Chip is combined with a 18-Core GPU. The next-gen GPU features Dynamic Caching, hardware-accelerated ray tracing, and mesh shading, all of which significantly increase performance for the most demanding pro apps and games. The 16.2\" Liquid Retina XDR display features a 3456 x 2234 resolution, 1000 nits of sustained brightness, 1600 nits of peak brightness, P3 color gamut support, and more. With 18GB of Unified RAM, 512GB of SSD storage, and improved battery life of up to 22 hours, you'll be able to load massive files and launch apps quickly, enabling you to work with photo and video libraries from almost anywhere."
+  },
+  {
+    "name": "Dell UltraSharp 38\" 1600p Curved Monitor",
+    "price": 1041.73,
+    "manufacturingId": "DEU3824DW",
+    "productId": "DEU3824DW",
+    "imageUrl": "/products/c1.jpg",
+    "images": [
+      "/products/c2.jpg",
+      "/products/b1.jpg"
+    ],
+    "keyFeatures": [
+      "38\" 21:9 IPS Panel",
+      "HDMI 2.1 | DisplayPort 1.4 | 2.5GbE RJ45",
+      "USB-C and USB-A 3.2 Gen 2 | 3.5mm",
+      "WQHD+ 3840 x 1600 at 60 Hz",
+      "2300R Curvature",
+      "8 ms and 5 ms Response Times",
+      "2000:1 Static Contrast Ratio",
+      "300 nits Brightness",
+      "1.07 Billion Colors",
+      "178/178° Viewing Angles"
+    ],
+    "description": "The UltraSharp 38\" 1600p Curved Monitor from Dell improves field of view while reducing reflection and eye fatigue to give you a comfortable, immersive experience. This display features a DisplayPort 1.4 port, two HDMI 2.1 ports, a USB-C port that supports DP 1.4, USB 3.2 Gen 2, and 90W of power delivery, a USB-C 3.2 Gen 2 port, two USB-C 3.2 Gen 2 ports with 15W of charging power, five USB-A 3.2 Gen 2 ports, one of which supports 2A of charging power, a 3.5mm audio output, and an 2.5GbE RJ45 network jack. All of this puts connectivity with almost any peripheral at your fingertips. Users will also be able to control two PC sources using a single keyboard and mouse via Auto KVM connectivity."
+  },
+  {
+    "name": "Dell UltraSharp 39.7\" 2160p HDR 120 Hz Curved Thunderbolt Hub Monitor",
+    "price": 1829.99,
+    "manufacturingId": "DEU4025QW",
+    "productId": "DEU4025QW",
+    "imageUrl": "/products/a1.jpg",
+    "images": [
+      "/products/b1.jpg",
+      "/products/b2.jpg",
+      "/products/b3.jpg"
+    ],
+    "keyFeatures": [
+      "39.7\" 21:9 IPS Black Panel",
+      "HDMI | DisplayPort | Thunderbolt 4",
+      "USB-C | USB-A | 2.5Gb RJ45 | 3.5mm",
+      "WUHD 5K 5120 x 2160 at 120 Hz with VRR",
+      "5 ms (Fast) / 8 ms (GtG) Response Times",
+      "2000:1 Static Contrast Ratio",
+      "600 nits Brightness",
+      "1.07 Billion Colors with DisplayHDR 600",
+      "Dual 9W Speakers | 2500R Curvature",
+      "100mm VESA Thread | 178° Viewing Angles"
+    ],
+    "description": "Watch every aspect of your work spring to life with the powerful and precise UltraSharp 39.7\" 2160p HDR 120 Hz Curved Thunderbolt Hub Monitor from Dell. Driven by Thunderbolt 4 technology, this display is able to deliver video, data, network connectivity, daisy-chaining for a second 5K display, and charge your device with up to 140W of power, all using its integrated Thunderbolt 4 port and a single Thunderbolt 4 cable. Thanks to the WUHD 5120 x 2160 resolution, 21:9 aspect ratio, and wide 178° viewing angles, this display is the equivalent of having two 2560 x 2160 displays side by side."
+  },
+  {
+    "name": "Apple 24\" iMac with M3 Chip (Silver)",
+    "price": 1899.00,
+    "manufacturingId": "APIM24M315SL",
+    "productId": "APIM24M315SL",
+    "imageUrl": "/products/d1.jpg",
+    "images": [
+      "/products/d2.jpg",
+      "/products/d3.jpg",
+      "/products/d4.jpg"
+    ],
+    "keyFeatures": [
+      "Apple M3 8-Core CPU",
+      "16GB Unified RAM | 512GB SSD",
+      "24\" 4480 x 2520 Retina Display",
+      "10-Core GPU | 16-Core Neural Engine",
+      "P3 Color Gamut | True Tone Technology",
+      "Wi-Fi 6E (802.11ax) | Bluetooth 5.3",
+      "2 x Thunderbolt 3 | 2 x USB 3 | 1GbE",
+      "Magic Keyboard w/ Touch ID & Magic Mouse",
+      "FaceTime HD 1080p Camera",
+      "macOS"
+    ],
+    "description": "With M3 architecture, the Apple 24\" iMac is more powerful and capable than ever. The Apple M3 integrates the CPU, GPU, Neural Engine, I/O, and more into a single system on a chip (SoC). Tackle your projects with the fast 8-Core CPU and take on graphics-intensive apps and games with the 10-Core GPU. Accelerate machine learning tasks with the 16-core Neural Engine. Combined with 16GB of Unified RAM and a 512GB SSD, you'll be able to take full advantage of macOS as well as other Apple apps. With a 4.5K (4480 x 2520) screen resolution, this iMac provides over one billion colors and 500 nits of brightness. The Retina 4.5K display also features the wide P3 color gamut, which provides a larger color space that more equally represents red, green, and blue. And with more available colors, the images will appear more vivid and reveal greater detail, with more balance and precision. The display is further enhanced by True Tone technology for a more natural viewing experience."
+  },
+  {
+    "name": "Apple Mac mini (M2 Pro)",
+    "price": 1149.00,
+    "manufacturingId": "APMMM2P512",
+    "productId": "APMMM2P512",
+    "imageUrl": "/products/e1.jpg",
+    "images": [
+      "/products/e2.jpg"
+    ],
+    "keyFeatures": [
+      "Apple M2 Pro 10-Core CPU",
+      "16GB Unified RAM | 512GB SSD",
+      "16-Core GPU | 16-Core Neural Engine",
+      "Wi-Fi 6E (802.11ax) | Bluetooth 5.3",
+      "4 x Thunderbolt 4 / USB4 Ports",
+      "USB-A 3.1 Gen 1 | HDMI | 3.5mm",
+      "1 x Gigabit Ethernet Port",
+      "macOS"
+    ],
+    "description": "The Apple Mac mini now features Apple's pro-level M2 Pro 10-Core chip, making it suitable for anything from rich presentations to immersive gaming or more intensive tasks like editing massive images and 8K ProRes video. The Apple M2 Pro integrates the CPU, GPU, Neural Engine, I/O, and more into a single system on a chip (SoC), this time utilizing 2nd-Gen 5nm process technology. Compared to the previous generation Mac mini with M1, users will be able to transcode ProRes video in Final Cut Pro up to 4.2x faster and simultaneously play back up to five streams of 8K ProRes 422 video at 30 fps, or up to 23 streams of 4K ProRes 422 video at 30 fps. It also offers up to 2.5x graphics performance in Affinity Pro. This is possible thanks to the M2 Pro's faster next-generation CPU and GPU, higher bandwidth memory, and a more powerful media engine for improved performance and power efficiency that includes an advanced thermal system for greater sustained performance. Adding to the Mac mini's power is 16GB of RAM and, thanks to the addition of Wi-Fi 6E (802.11ax), wireless networking will operate at up to 2.4 Gb/s."
+  },
+  {
+    "name": "SanDisk 4TB Extreme Portable SSD V2 (Black)",
+    "price": 299.99,
+    "manufacturingId": "SAE614TB",
+    "productId": "SAE614TB",
+    "imageUrl": "/products/f1.jpg",
+    "images": [
+      "/products/f4.jpg",
+      "/products/f2.jpg",
+      "/products/f3.jpg"
+    ],
+    "keyFeatures": [
+      "4TB Total Storage Capacity",
+      "USB-C 3.2 Gen 2",
+      "Up to 1050 MB/s Read Speed",
+      "Up to 1000 MB/s Write Speed",
+      "Bus Powered",
+      "256-Bit AES Hardware Encryption",
+      "IP65 Water & Dust Resistance",
+      "Carabiner Loop for Easy Transport"
+    ],
+    "description": "Take your data with you using the 4TB Extreme Portable SSD V2 from SanDisk. Designed for performance under adverse conditions, this durable black colored 4TB SSD features read and write speeds up to 1050 and 1000 MB/s, respectively. Bus powered, the SanDisk Extreme Portable SSD utilizes a USB-C connection. A USB-C to USB-C cable is included, along with a USB-C to USB-A adapter."
+  }
+]

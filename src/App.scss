@@ -1,3 +1,13 @@
+.ploading {
+  min-height: 80vh;
+  display: grid;
+  gap: 0.25rem;
+  place-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: var(--fs-xs);
+}
+
 .head {
   background: var(--clr-primary);
   color: var(--clr-black);
@@ -11,15 +21,13 @@
   }
 
   &-logo {
-    //height: var(--fs-md);
-    width: min(300px, 50vw);
+    height: 16px;
   }
 
 }
 
 
 .head-nav {
-  display: none;
 
   @media (min-width: 980px) {
     display: contents;
@@ -42,8 +50,17 @@
 
   &-link {
     color: var(--clr-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
     text-decoration: none;
     font-weight: 500;
+
+    &:focus,
+    &:hover {
+      text-decoration: 3px underline;
+    }
   }
 
   &-svg {
@@ -65,7 +82,7 @@
   }
 
   &-logo {
-    width: min(550px, 100%);
+    height: 16px;
   }
 
   &-text {
@@ -74,7 +91,7 @@
   }
 
   &-hr {
-    border: 1px solid var(--clr-dark-gray);
+    border-top: 1px solid var(--clr-dark-gray);
     border-width: 1px 0 0;
     margin-top: 1rem;
   }

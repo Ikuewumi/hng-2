@@ -1,9 +1,14 @@
+import { useStore } from "@nanostores/react"
 import "./index.scss"
-
+import "@/stores/cart"
+import { $allItems } from "@/stores/global"
+import HomeCard from "@/components/HomeCard"
 
 const Home = () => {
+  const allItems = useStore($allItems)
 
   return <>
+
     <section className="mhero">
       <picture className="mhero-picture">
         <img className="mhero-image" src="/app.jpg" alt="Autumn Collection of Devices" />
@@ -16,58 +21,30 @@ const Home = () => {
           <p className="mhero-text">Get the latest tech products at CRAZY discount prices.</p>
         </div>
 
-        <button className="mhero-button" data-btn>Buy Now</button>
+        <a href="#pick" className="mhero-button" data-btn>Buy Now</a>
       </div>
     </section>
 
 
 
     <section className="mpicks">
-      <h2 className="mpicks-heading">Editor’s Pick</h2>
+      <h2 className="mpicks-heading" id="pick">Editor’s Pick</h2>
       <p className="mpicks-text">From the best stores and offers</p>
 
 
 
       <ul className="mpicks-list">
-
+        {allItems.map(item => {
+          return {
+            imageUrl: item.imageUrl ?? "",
+            name: item.name,
+            productId: item.productId,
+            manufacturerId: item.manufacturingId,
+            price: item.price
+          }
+        }).map((item_, i) => <li className="mpicks-li" key={i}><HomeCard {...item_} /></li>)}
         <li className="mpicks-li">
-          <div className="hpcard">
-            <img className="hpcard-img" src="/screen.jpg" alt='Dell UltraSharp 38" 1600p Curved Monitor' />
-            <h3 className="hpcard-name">Dell UltraSharp 38" 1600p Curved Monitor</h3>
-            <p className="hpcard-id">#DEU3824DW • MFR #U3824DW</p>
-            <div className="hpcard-price-bar">
-              <strong className="hpcard-price">$1,041.73</strong>
-              <button data-btn className="hpcard-button">Add To Card</button>
-            </div>
-          </div>
         </li>
-
-
-        <li className="mpicks-li">
-          <div className="hpcard">
-            <img className="hpcard-img" src="/screen.jpg" alt='Dell UltraSharp 38" 1600p Curved Monitor' />
-            <h3 className="hpcard-name">Dell UltraSharp 38" 1600p Curved Monitor</h3>
-            <p className="hpcard-id">#DEU3824DW • MFR #U3824DW</p>
-            <div className="hpcard-price-bar">
-              <strong className="hpcard-price">$1,041.73</strong>
-              <button data-btn className="hpcard-button">Add To Card</button>
-            </div>
-          </div>
-        </li>
-
-
-        <li className="mpicks-li">
-          <div className="hpcard">
-            <img className="hpcard-img" src="/screen.jpg" alt='Dell UltraSharp 38" 1600p Curved Monitor' />
-            <h3 className="hpcard-name">Dell UltraSharp 38" 1600p Curved Monitor</h3>
-            <p className="hpcard-id">#DEU3824DW • MFR #U3824DW</p>
-            <div className="hpcard-price-bar">
-              <strong className="hpcard-price">$1,041.73</strong>
-              <button data-btn className="hpcard-button">Add To Card</button>
-            </div>
-          </div>
-        </li>
-
       </ul>
 
 
@@ -86,7 +63,7 @@ const Home = () => {
           <p className="mad-text">Talk to our team to customize your new workspace.</p>
         </div>
 
-        <button className="mad-button" data-btn>Buy Now</button>
+        <a href="#pick" className="mad-button" data-btn>Buy Now</a>
       </div>
     </section>
 
@@ -95,35 +72,35 @@ const Home = () => {
     <section className="mfoot">
 
       <div className="mfoot-content">
-        <h2 className="mfoot-heading">Top Categories</h2>
+        <h2 className="mfoot-heading">Our Products</h2>
 
         <ul className="mfoot-list">
           <li className="mfoot-li">
-            <a href="#" className="mfoot-link">Mac</a>
+            <span className="mfoot-link">Mac</span>
           </li>
 
 
           <li className="mfoot-li">
-            <a href="#" className="mfoot-link">Laptops</a>
+            <span className="mfoot-link">Laptops</span>
           </li>
 
           <li className="mfoot-li">
-            <a href="#" className="mfoot-link">iPads and Tablets</a>
+            <span className="mfoot-link">iPads and Tablets</span>
           </li>
 
           <li className="mfoot-li">
-            <a href="#" className="mfoot-link">Desktops and Workstations</a>
+            <span className="mfoot-link">Desktops and Workstations</span>
           </li>
 
           <li className="mfoot-li">
-            <a href="#" className="mfoot-link">Accessories</a>
+            <span className="mfoot-link">Accessories</span>
           </li>
 
         </ul>
       </div>
 
       <picture className="mfoot-picture">
-        <img src="/app.jpg" alt="Image" className="mfoot-img" />
+        <img src="/products.jpg" alt="Image" className="mfoot-img" />
       </picture>
 
     </section>

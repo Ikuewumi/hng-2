@@ -1,110 +1,54 @@
 import "./index.scss"
+import { useStore } from "@nanostores/react";
+import { $cart, $cartCount } from "@/stores/cart";
+import { $allItems } from "@/stores/global";
+import CartItem from "@/components/CartItem";
+
+import OrderSummary from "@/components/OrderSummary";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-	return <div className="page-cart">
-		<div className="cart-header">
-			<h1 className="cart-heading">My Cart</h1>
-			<p className="cart-count">Total Items (4)</p>
+	const cartCount = useStore($cartCount)
+	const cartItems = useStore($cart)
+	const allItems = useStore($allItems)
+
+	const cartIdList = Object.values(cartItems).map(cart => cart.id)
+	const cartList = cartIdList.map((id) => {
+		const cartItem = allItems.find(item => item.productId === id)!
+		return {
+			...cartItem,
+			manufacturerId: cartItem.manufacturingId,
+			quantity: cartItems[id].quantity
+		}
+	}).filter(cartItem => cartItem.quantity > 0)
+
+
+	return <>
+
+		<div className="page-cart">
+			<div className="cart-header">
+				<h1 className="cart-heading">Cart</h1>
+				<p className="cart-count">Total Items ({cartCount})</p>
+			</div>
+
+			<div className="cart-main">
+				{cartList.length ? <>
+					<ul className="cart-list">
+						{cartList.map((cart, id) => <li className="cart-li" key={id}><CartItem {...cart} /></li>)}
+					</ul>
+				</> : <section className="cart-none">
+					<p className="cart-none-text">Your cart is empty. Start shopping.</p>
+					<Link to="/#pick" data-btn className="cart-none-btn">Go To Store</Link>
+				</section>}
+			</div>
+
+
+			<OrderSummary />
 		</div>
 
 
-		<ul className="cart-list">
-			<li className="cart-li">
-				<div className="citem">
-					<img src="/screen.jpg" alt="" className="citem-img" />
-					<div className="citem-content">
-						<div className="citem-header">
-							<h2 className="citem-name">Dell UltraSharp 38" 1600p Curved Monitor</h2>
-							<button className="citem-remove" title="Remove Item">Remove</button>
-						</div>
 
-						<div className="citem-id">#DEU3824DW • MFR #U3824DW</div>
-						<div className="pcount">
-							<button className="pcount-remove" title="Remove Item">-</button>
-							<span className="pcount-value">1</span>
-							<button className="pcount-add" title="Add Item">+</button>
-						</div>
-						<strong className="citem-price">$1,041.73</strong>
-					</div>
-				</div>
-			</li>
-
-
-			<li className="cart-li">
-				<div className="citem">
-					<img src="/screen.jpg" alt="" className="citem-img" />
-					<div className="citem-content">
-						<div className="citem-header">
-							<h2 className="citem-name">Dell UltraSharp 38" 1600p Curved Monitor</h2>
-							<button className="citem-remove" title="Remove Item">Remove</button>
-						</div>
-
-						<div className="citem-id">#DEU3824DW • MFR #U3824DW</div>
-						<div className="pcount">
-							<button className="pcount-remove" title="Remove Item">-</button>
-							<span className="pcount-value">1</span>
-							<button className="pcount-add" title="Add Item">+</button>
-						</div>
-						<strong className="citem-price">$1,041.73</strong>
-					</div>
-				</div>
-			</li>
-
-
-			<li className="cart-li">
-				<div className="citem">
-					<img src="/screen.jpg" alt="" className="citem-img" />
-					<div className="citem-content">
-						<div className="citem-header">
-							<h2 className="citem-name">Dell UltraSharp 38" 1600p Curved Monitor</h2>
-							<button className="citem-remove" title="Remove Item">Remove</button>
-						</div>
-
-						<div className="citem-id">#DEU3824DW • MFR #U3824DW</div>
-						<div className="pcount">
-							<button className="pcount-remove" title="Remove Item">-</button>
-							<span className="pcount-value">1</span>
-							<button className="pcount-add" title="Add Item">+</button>
-						</div>
-						<strong className="citem-price">$1,041.73</strong>
-					</div>
-				</div>
-			</li>
-
-		</ul>
-
-
-
-		<div className="summary">
-			<h2 className="summary-heading">Order Summary</h2>
-			<dl className="summary-list">
-				<div className="summary-field">
-					<dt className="summary-dt">Subtotal:</dt>
-					<dd className="summary-dd">$1,200.00</dd>
-				</div>
-
-				<div className="summary-field">
-					<dt className="summary-dt">Duties and Taxes:</dt>
-					<dd className="summary-dd">Duties & Taxes</dd>
-				</div>
-
-
-				<div className="summary-field total">
-					<dt className="summary-dt">Total:</dt>
-					<dd className="summary-dd">$1,200.00</dd>
-				</div>
-			</dl>
-
-			<button data-btn className="summary-button to-payment">Proceed To Payment</button>
-
-			<hr className="summary-hr" />
-
-			<h3 className="summary-fheading">Your Card Details</h3>
-
-			<button data-btn className="summary-button card-form">Place Order</button>
-		</div>
-
-	</div>
+	</>
 
 }
 

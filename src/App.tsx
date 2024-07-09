@@ -1,48 +1,51 @@
 import Assets from "./components/Assets"
 import "./App.scss"
-import { Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
+import { $loader, runMount } from "@stores/global"
+import { useStore } from "@nanostores/react"
+import { $cartCount } from "./stores/cart"
+import { CSSProperties } from "react"
+runMount()
 
 function App() {
+  const loader = useStore($loader)
+  const cartCount = useStore($cartCount)
+
 
   return (
     <>
       <header data-sg className="head">
         <div className="head-wrapper">
-          <figure className="head-figure">
-            <svg className="head-logo" viewBox="0 0 285 24"><use href="#logo"></use></svg>
-          </figure>
-
+          <Link className="head-logo-link" to="/">
+            <figure className="head-figure">
+              <svg className="head-logo" viewBox="0 0 285 24"><use href="#logo"></use></svg>
+            </figure>
+          </Link>
           <nav className="head-nav">
-            <ul className="head-nav-list text">
-              <li className="head-nav-li"><a href="#" className="head-nav-link">Mac</a></li>
-              <li className="head-nav-li"><a href="#" className="head-nav-link">Laptops</a></li>
-              <li className="head-nav-li"><a href="#" className="head-nav-link">iPads and Tablets</a></li>
-              <li className="head-nav-li"><a href="#" className="head-nav-link">Desktops & Workstations</a></li>
-              <li className="head-nav-li"><a href="#" className="head-nav-link">Accessories</a></li>
-            </ul>
-
-
-
             <ul className="head-nav-list icons">
               <li className="head-nav-li">
-                <a href="#" className="head-nav-link">
-                  <svg className="head-nav-svg" viewBox="0 0 24 24"><use href="#search"></use></svg>
-                </a>
-              </li>
-              <li className="head-nav-li">
-                <a href="#" className="head-nav-link icon">
-                  <svg className="head-nav-svg" viewBox="0 0 24 24"><use href="#shopping-cart"></use></svg>
-                </a>
+                <Link to="cart" className="head-nav-link icon">
+                  <svg className="head-nav-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_2286_634" style={{ "mask-type": "alpha" } as unknown as CSSProperties} maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                      <rect width="32" height="32" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_2286_634)">
+                      <path d="M9.53833 28.7437C8.89056 28.7437 8.33978 28.5167 7.886 28.0627C7.43222 27.6089 7.20533 27.0581 7.20533 26.4103C7.20533 25.7623 7.43222 25.2114 7.886 24.7577C8.33978 24.3039 8.89056 24.077 9.53833 24.077C10.1863 24.077 10.7372 24.3039 11.191 24.7577C11.6448 25.2114 11.8717 25.7623 11.8717 26.4103C11.8717 27.0581 11.6448 27.6089 11.191 28.0627C10.7372 28.5167 10.1863 28.7437 9.53833 28.7437ZM22.4617 28.7437C21.8137 28.7437 21.2628 28.5167 20.809 28.0627C20.3552 27.6089 20.1283 27.0581 20.1283 26.4103C20.1283 25.7623 20.3552 25.2114 20.809 24.7577C21.2628 24.3039 21.8137 24.077 22.4617 24.077C23.1094 24.077 23.6602 24.3039 24.114 24.7577C24.5678 25.2114 24.7947 25.7623 24.7947 26.4103C24.7947 27.0581 24.5678 27.6089 24.114 28.0627C23.6602 28.5167 23.1094 28.7437 22.4617 28.7437ZM8.02033 7.66667L11.4 14.7437H20.4897C20.5666 14.7437 20.635 14.7244 20.695 14.686C20.7548 14.6476 20.806 14.5941 20.8487 14.5257L24.4257 8.02567C24.477 7.93167 24.4812 7.84833 24.4383 7.77567C24.3957 7.703 24.323 7.66667 24.2203 7.66667H8.02033ZM7.06167 5.66667H25.5743C26.1197 5.66667 26.532 5.89878 26.8113 6.363C27.0909 6.827 27.1042 7.30089 26.8513 7.78467L22.5793 15.523C22.3607 15.9077 22.0714 16.2072 21.7117 16.4217C21.3517 16.6363 20.9572 16.7437 20.5283 16.7437H10.8L9.25633 19.564C9.18789 19.6667 9.18578 19.7778 9.25 19.8973C9.314 20.0171 9.41011 20.077 9.53833 20.077H23.795C24.0786 20.077 24.3161 20.1727 24.5077 20.364C24.699 20.5556 24.7947 20.7932 24.7947 21.077C24.7947 21.3608 24.699 21.5983 24.5077 21.7897C24.3161 21.9812 24.0786 22.077 23.795 22.077H9.53833C8.64944 22.077 7.98156 21.6937 7.53467 20.927C7.08756 20.1603 7.07178 19.3949 7.48733 18.6307L9.38967 15.2103L4.53867 5H3C2.71622 5 2.47867 4.90422 2.28733 4.71267C2.09578 4.52133 2 4.28378 2 4C2 3.71622 2.09578 3.47867 2.28733 3.28733C2.47867 3.09578 2.71622 3 3 3H5.03833C5.26589 3 5.47789 3.06022 5.67433 3.18067C5.871 3.30133 6.02056 3.471 6.123 3.68967L7.06167 5.66667Z" fill="black" />
+                    </g>
+                  </svg>
+
+                  <span className="head-nav-linktext">Cart ({cartCount})</span>
+                </Link>
               </li>
             </ul>
           </nav>
         </div>
-      </header>
+      </header >
 
 
       <main data-sg className="main">
 
-        <Outlet />
+        {loader ? <section className="ploading"><p className="ploading-text">Loading....</p></section> : <Outlet />}
 
       </main>
 
@@ -64,20 +67,30 @@ function App() {
           <div className="foot-linkbar">
             <ul className="foot-social-list">
               <li className="foot-social-li">
-                <a className="foot-social-link" href="#" data-btn>
-                  <svg className="foot-social-svg" viewBox="0 0 24 24"><use href="#facebook"></use></svg>
-                </a>
+                <span className="foot-social-link" data-btn>
+                  <svg className="foot-social-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 0C7.16352 0 0 7.16352 0 16C0 23.5034 5.16608 29.7997 12.135 31.529V20.8896H8.83584V16H12.135V13.8931C12.135 8.44736 14.5997 5.9232 19.9462 5.9232C20.96 5.9232 22.7091 6.12224 23.4246 6.32064V10.7526C23.047 10.713 22.391 10.6931 21.5763 10.6931C18.953 10.6931 17.9392 11.687 17.9392 14.2707V16H23.1654L22.2675 20.8896H17.9392V31.8829C25.8618 30.9261 32.0006 24.1805 32.0006 16C32 7.16352 24.8365 0 16 0Z" fill="black" />
+                  </svg>
+                </span>
               </li>
 
               <li className="foot-social-li">
-                <a className="foot-social-link" href="#" data-btn>
-                  <svg className="foot-social-svg" viewBox="0 0 24 24"><use href="#twitter"></use></svg>
-                </a>
+                <span className="foot-social-link" data-btn>
+                  <svg className="foot-social-svg" width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.4352 0.538574H27.9332L18.1065 11.7699L29.6668 27.0532H20.6151L13.5255 17.784L5.41343 27.0532H0.912739L11.4234 15.04L0.333496 0.538574H9.61497L16.0234 9.01102L23.4352 0.538574ZM21.8566 24.3609H24.3489L8.26069 3.08942H5.58611L21.8566 24.3609Z" fill="black" />
+                  </svg>
+
+                </span>
               </li>
               <li className="foot-social-li">
-                <a className="foot-social-link" href="#" data-btn>
-                  <svg className="foot-social-svg" viewBox="0 0 24 24"><use href="#instagram"></use></svg>
-                </a>
+                <span className="foot-social-link" data-btn>
+                  <svg className="foot-social-svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2.88125C20.275 2.88125 20.7813 2.9 22.4625 2.975C24.025 3.04375 24.8688 3.30625 25.4313 3.525C26.175 3.8125 26.7125 4.1625 27.2688 4.71875C27.8313 5.28125 28.175 5.8125 28.4625 6.55625C28.6813 7.11875 28.9438 7.96875 29.0125 9.525C29.0875 11.2125 29.1063 11.7188 29.1063 15.9875C29.1063 20.2625 29.0875 20.7688 29.0125 22.45C28.9438 24.0125 28.6813 24.8563 28.4625 25.4188C28.175 26.1625 27.825 26.7 27.2688 27.2563C26.7063 27.8188 26.175 28.1625 25.4313 28.45C24.8688 28.6688 24.0188 28.9313 22.4625 29C20.775 29.075 20.2688 29.0938 16 29.0938C11.725 29.0938 11.2188 29.075 9.5375 29C7.975 28.9313 7.13125 28.6688 6.56875 28.45C5.825 28.1625 5.2875 27.8125 4.73125 27.2563C4.16875 26.6938 3.825 26.1625 3.5375 25.4188C3.31875 24.8563 3.05625 24.0063 2.9875 22.45C2.9125 20.7625 2.89375 20.2563 2.89375 15.9875C2.89375 11.7125 2.9125 11.2063 2.9875 9.525C3.05625 7.9625 3.31875 7.11875 3.5375 6.55625C3.825 5.8125 4.175 5.275 4.73125 4.71875C5.29375 4.15625 5.825 3.8125 6.56875 3.525C7.13125 3.30625 7.98125 3.04375 9.5375 2.975C11.2188 2.9 11.725 2.88125 16 2.88125ZM16 0C11.6563 0 11.1125 0.01875 9.40625 0.09375C7.70625 0.16875 6.5375 0.44375 5.525 0.8375C4.46875 1.25 3.575 1.79375 2.6875 2.6875C1.79375 3.575 1.25 4.46875 0.8375 5.51875C0.44375 6.5375 0.16875 7.7 0.09375 9.4C0.01875 11.1125 0 11.6562 0 16C0 20.3438 0.01875 20.8875 0.09375 22.5938C0.16875 24.2938 0.44375 25.4625 0.8375 26.475C1.25 27.5313 1.79375 28.425 2.6875 29.3125C3.575 30.2 4.46875 30.75 5.51875 31.1562C6.5375 31.55 7.7 31.825 9.4 31.9C11.1063 31.975 11.65 31.9937 15.9938 31.9937C20.3375 31.9937 20.8813 31.975 22.5875 31.9C24.2875 31.825 25.4563 31.55 26.4688 31.1562C27.5188 30.75 28.4125 30.2 29.3 29.3125C30.1875 28.425 30.7375 27.5313 31.1438 26.4813C31.5375 25.4625 31.8125 24.3 31.8875 22.6C31.9625 20.8938 31.9813 20.35 31.9813 16.0063C31.9813 11.6625 31.9625 11.1188 31.8875 9.4125C31.8125 7.7125 31.5375 6.54375 31.1438 5.53125C30.75 4.46875 30.2063 3.575 29.3125 2.6875C28.425 1.8 27.5313 1.25 26.4813 0.84375C25.4625 0.45 24.3 0.175 22.6 0.1C20.8875 0.01875 20.3438 0 16 0Z" fill="black" />
+                    <path d="M16 7.78125C11.4625 7.78125 7.78125 11.4625 7.78125 16C7.78125 20.5375 11.4625 24.2188 16 24.2188C20.5375 24.2188 24.2188 20.5375 24.2188 16C24.2188 11.4625 20.5375 7.78125 16 7.78125ZM16 21.3312C13.0563 21.3312 10.6687 18.9438 10.6687 16C10.6687 13.0563 13.0563 10.6687 16 10.6687C18.9438 10.6687 21.3312 13.0563 21.3312 16C21.3312 18.9438 18.9438 21.3312 16 21.3312Z" fill="black" />
+                    <path d="M26.4625 7.45635C26.4625 8.51885 25.6 9.3751 24.5438 9.3751C23.4813 9.3751 22.625 8.5126 22.625 7.45635C22.625 6.39385 23.4875 5.5376 24.5438 5.5376C25.6 5.5376 26.4625 6.4001 26.4625 7.45635Z" fill="black" />
+                  </svg>
+
+                </span>
               </li>
 
             </ul>
@@ -86,15 +99,15 @@ function App() {
 
             <ul className="foot-link-list">
               <li className="foot-link-li">
-                <a href="#" className="foot-link-text">Terms Of Service</a>
+                <span className="foot-link-text">Terms Of Service</span>
               </li>
 
               <li className="foot-link-li">
-                <a href="#" className="foot-link-text">Privacy Policy</a>
+                <span className="foot-link-text">Privacy Policy</span>
               </li>
 
               <li className="foot-link-li">
-                <a href="#" className="foot-link-text">Returns & Refunds</a>
+                <span className="foot-link-text">Returns & Refunds</span>
               </li>
 
             </ul>

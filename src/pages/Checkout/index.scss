@@ -1,0 +1,108 @@
+.page-checkout {
+	margin-block: var(--fs-sm) var(--fs-md);
+	display: grid;
+	gap: 1.25rem;
+
+	grid-template-rows: [pcheckout-header-start] auto [pcheckout-header-end pcheckout-main-start] auto [pcheckout-main-end pcheckout-summary-start] auto [pcheckout-summary-end];
+	grid-template-columns: [pcheckout-header-start pcheckout-main-start pcheckout-summary-start] 1fr [pcheckout-header-start pcheckout-main-start pcheckout-summary-start];
+
+
+	@media (min-width: 1100px) {
+		grid-template-columns:
+			[pcheckout-header-start pcheckout-main-start] 8fr [pcheckout-main-end pcheckout-summary-start] minmax(350px, 4fr) [pcheckout-header-end pcheckout-main-end];
+		grid-template-rows:
+			[pcheckout-header-start] auto [pcheckout-header-end pcheckout-main-start pcheckout-summary-start] auto [pcheckout-main-end pcheckout-summary-end];
+	}
+
+	.summary {
+		grid-area: pcheckout-summary;
+
+
+		&-fcheckbox {
+			display: flex;
+			align-items: start;
+			justify-content: center;
+			gap: 4px;
+
+			span {
+				border: none;
+				background: none;
+				padding: 0;
+				color: var(--clr-blue);
+				font-weight: 500;
+				text-decoration: 2px underline currentColor;
+				cursor: pointer;
+				width: fit-content;
+			}
+		}
+
+
+
+		input[type=checkbox] {
+			width: 20px;
+			aspect-ratio: 1;
+			border: 1px solid var(--clr-light-gray);
+			margin-top: 0.2rem;
+		}
+	}
+
+
+
+}
+
+.checkout {
+
+	&-header {
+		display: grid;
+		gap: 0.25rem;
+		grid-area: pcheckout-header;
+	}
+
+	&-heading {
+		font-size: var(--fs-lg);
+		font-weight: 600;
+		line-height: 1;
+	}
+
+
+
+}
+
+
+
+
+.cform {
+	background: var(--clr-white);
+	border-radius: 15px;
+	padding: 1.25rem 1.5rem 2rem;
+	box-shadow: 1px 2px 8px 0px hsla(0, 0%, 0%, 0.04);
+	height: fit-content;
+	grid-area: pcheckout-main;
+
+
+	&-heading {
+		font-size: var(--fs-sm);
+		font-weight: 600;
+		line-height: 1;
+	}
+
+	&-form {
+		--form-gap: 1rem;
+		display: flex;
+		gap: 0.5rem var(--form-gap);
+		flex-flow: row wrap;
+		margin-top: 1.5rem;
+	}
+
+	.cinput-field {
+		width: 100%;
+	}
+
+
+	.cinput-field[data-inputid="first-name"],
+	.cinput-field[data-inputid="last-name"] {
+		@media (min-width: 700px) {
+			width: calc(50% - 0.5rem);
+		}
+	}
+}
