@@ -97,7 +97,7 @@
     "description": "With M3 architecture, the Apple 24\" iMac is more powerful and capable than ever. The Apple M3 integrates the CPU, GPU, Neural Engine, I/O, and more into a single system on a chip (SoC). Tackle your projects with the fast 8-Core CPU and take on graphics-intensive apps and games with the 10-Core GPU. Accelerate machine learning tasks with the 16-core Neural Engine. Combined with 16GB of Unified RAM and a 512GB SSD, you'll be able to take full advantage of macOS as well as other Apple apps. With a 4.5K (4480 x 2520) screen resolution, this iMac provides over one billion colors and 500 nits of brightness. The Retina 4.5K display also features the wide P3 color gamut, which provides a larger color space that more equally represents red, green, and blue. And with more available colors, the images will appear more vivid and reveal greater detail, with more balance and precision. The display is further enhanced by True Tone technology for a more natural viewing experience."
   },
   {
-    "name": "Apple Mac mini (M2 Pro)",
+    "name": "Apple Mac mini (M2 Pro 10-Core CPU, 16Gb)",
     "price": 1149.00,
     "manufacturingId": "APMMM2P512",
     "productId": "APMMM2P512",
