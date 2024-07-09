@@ -1,7 +1,7 @@
 import { formatCurrency } from "@/composables/format"
 import { $cartTotal } from "@/stores/cart"
 import { useStore } from "@nanostores/react"
-import { Link, Navigate, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import CustomInput from "../CustomInput"
 import { FormEventHandler } from "react"
 
