@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./index.scss"
-import { EventHandler, SyntheticEvent, useState } from "react";
+import { SyntheticEvent, useState } from "react";
 import { addToCart } from "@/stores/cart";
 import { formatCurrency } from "@/composables/format";
 interface HomeCardProps {
